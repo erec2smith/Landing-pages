@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erec & Coffe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="static/css/style.css" />
+  <link rel="icon" href="static/images/icon.jpg">
+</head>
+<body>
+
+  <div class="grain"></div>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <nav class="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">☕</span>
+      <span class="logo-text">Erec</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#drinks">Menu</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+      <li><a href="#drinks" onclick="closeMobileMenu()">Menu</a></li>
+      <li><a href="#hours" onclick="closeMobileMenu()">Hours</a></li>
+      <li><a href="#pricing" onclick="closeMobileMenu()">Pricing</a></li>
+      <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+  </div>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Est. 2019 — New York City</p>
+      <h1 class="hero-title reveal">
+        <em>Erec</em>
+        <span>&amp; Coffe</span>
+      </h1>
+      <p class="hero-sub reveal">Where every cup tells a story. Crafted with precision, served with soul.</p>
+      <a href="#drinks" class="btn-primary reveal">Explore Our Menu</a>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-badge">
+      <svg viewBox="0 0 200 200"><path id="circlePath" d="M 100,100 m -70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/><text><textPath href="#circlePath">SPECIALTY COFFEE · ARTISAN ROAST · NYC ·</textPath></text></svg>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label reveal">Our Story</p>
+          <h2 class="section-title reveal">Born from a <em>passion</em> for the perfect cup</h2>
+          <p class="about-body reveal">Erec started as a small corner café in the heart of Manhattan. What began as a dream between two friends who believed coffee could be more than a morning ritual has grown into a beloved sanctuary for those who appreciate the craft.</p>
+          <p class="about-body reveal">We source our beans directly from farms in Ethiopia, Colombia, and Guatemala — building relationships with growers who share our obsession with quality. Every roast is a story. Every cup, an experience.</p>
+          <div class="about-stats reveal">
+            <div class="stat"><span class="stat-num">6+</span><span>Years Open</span></div>
+            <div class="stat"><span class="stat-num">12</span><span>Origin Beans</span></div>
+            <div class="stat"><span class="stat-num">50K+</span><span>Happy Guests</span></div>
+          </div>
+        </div>
+        <div class="about-images reveal">
+          <div class="shop-img-main">
+            <img src="static/images/1.jpg" alt="Coffee Shop Interior" />
+          </div>
+          <div class="shop-img-secondary">
+            <img src="static/images/2.jpg" alt="Coffee Brewing" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team" id="team">
+    <div class="container">
+      <p class="section-label reveal">The Faces Behind The Brew</p>
+      <h2 class="section-title reveal">Meet Our <em>Team</em></h2>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-img">
+            <img src="static/images/3.jpg" alt="Marcus Reed" />
+          </div>
+          <div class="team-info">
+            <h3>Marcus Reed</h3>
+            <p>Founder & Head Roaster</p>
+          </div>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-img">
+            <img src="static/images/4.jpg" alt="Sophia Lane" />
+          </div>
+          <div class="team-info">
+            <h3>Sophia Lane</h3>
+            <p>Co-Founder & Barista</p>
+          </div>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-img">
+            <img src="static/images/5.jpg" alt="James Holloway" />
+          </div>
+          <div class="team-info">
+            <h3>James Holloway</h3>
+            <p>Lead Barista</p>
+          </div>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-img">
+            <img src="static/images/6.jpg" alt="Amara Osei" />
+          </div>
+          <div class="team-info">
+            <h3>Amara Osei</h3>
+            <p>Pastry Chef</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="drinks" id="drinks">
+    <div class="container">
+      <p class="section-label reveal">Our Craft</p>
+      <h2 class="section-title reveal">The <em>Menu</em></h2>
+      <div class="drinks-grid">
+        <div class="drink-card reveal">
+          <div class="drink-img">
+            <img src="static/images/7.jpg" alt="Espresso" />
+            <div class="drink-overlay"><span>View</span></div>
+          </div>
+          <div class="drink-info">
+            <h3>Espresso</h3>
+            <p>Bold single-origin shot pulled to perfection</p>
+            <span class="drink-origin">Ethiopia · Yirgacheffe</span>
+          </div>
+        </div>
+        <div class="drink-card reveal">
+          <div class="drink-img">
+            <img src="static/images/8.jpg" alt="Cappuccino" />
+            <div class="drink-overlay"><span>View</span></div>
+          </div>
+          <div class="drink-info">
+            <h3>Cappuccino</h3>
+            <p>Velvety microfoam over a rich double shot</p>
+            <span class="drink-origin">Colombia · Huila</span>
+          </div>
+        </div>
+        <div class="drink-card reveal">
+          <div class="drink-img">
+            <img src="static/images/9.jpg" alt="Cold Brew" />
+            <div class="drink-overlay"><span>View</span></div>
+          </div>
+          <div class="drink-info">
+            <h3>Cold Brew</h3>
+            <p>Steeped 18 hours for a silky, low-acid finish</p>
+            <span class="drink-origin">Guatemala · Antigua</span>
+          </div>
+        </div>
+        <div class="drink-card reveal">
+          <div class="drink-img">
+            <img src="static/images/10.jpg" alt="Latte" />
+            <div class="drink-overlay"><span>View</span></div>
+          </div>
+          <div class="drink-info">
+            <h3>Signature Latte</h3>
+            <p>Hand-poured art with house-made vanilla syrup</p>
+            <span class="drink-origin">Brazil · Cerrado</span>
+          </div><!-- if u find me this is my instagram username : @erec__smith  -->
+        </div>
+        <div class="drink-card reveal">
+          <div class="drink-img">
+            <img src="static/images/11.jpg" alt="Matcha Latte" />
+            <div class="drink-overlay"><span>View</span></div>
+          </div>
+          <div class="drink-info">
+            <h3>Matcha Latte</h3>
+            <p>Ceremonial grade matcha with oat milk</p>
+            <span class="drink-origin">Kyoto · Japan</span>
+          </div>
+        </div>
+        <div class="drink-card reveal">
+          <div class="drink-img">
+            <img src="static/images/12.jpg" alt="Mocha" />
+            <div class="drink-overlay"><span>View</span></div>
+          </div>
+          <div class="drink-info">
+            <h3>Dark Mocha</h3>
+            <p>Espresso with 72% dark chocolate and steamed milk</p>
+            <span class="drink-origin">Peru · San Ignacio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hours" id="hours">
+    <div class="container">
+      <div class="hours-inner">
+        <div class="hours-text">
+          <p class="section-label reveal">We're Open</p>
+          <h2 class="section-title reveal">Find Us <em>Here</em></h2>
+          <p class="hours-address reveal">📍 142 West 10th Street, Manhattan, NY 10014</p>
+        </div>
+        <div class="hours-table-wrap reveal">
+          <table class="hours-table">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Open</th>
+                <th>Close</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="today-row"><td>Monday</td><td>7:00 AM</td><td>8:00 PM</td><td><span class="badge open">Open</span></td></tr>
+              <tr><td>Tuesday</td><td>7:00 AM</td><td>8:00 PM</td><td><span class="badge open">Open</span></td></tr>
+              <tr><td>Wednesday</td><td>7:00 AM</td><td>8:00 PM</td><td><span class="badge open">Open</span></td></tr>
+              <tr><td>Thursday</td><td>7:00 AM</td><td>9:00 PM</td><td><span class="badge open">Open</span></td></tr>
+              <tr><td>Friday</td><td>7:00 AM</td><td>10:00 PM</td><td><span class="badge open">Open</span></td></tr>
+              <tr><td>Saturday</td><td>8:00 AM</td><td>10:00 PM</td><td><span class="badge open">Open</span></td></tr>
+              <tr><td>Sunday</td><td>9:00 AM</td><td>6:00 PM</td><td><span class="badge open">Open</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <p class="section-label reveal">Transparent Pricing</p>
+      <h2 class="section-title reveal">Our <em>Prices</em></h2>
+      <div class="pricing-grid">
+        <div class="pricing-card reveal">
+          <div class="pricing-header">
+            <h3>Espresso Bar</h3>
+            <p>Classic shots & milk drinks</p>
+          </div>
+          <ul class="price-list">
+            <li><span>Espresso (Single)</span><span>$3.50</span></li>
+            <li><span>Espresso (Double)</span><span>$4.50</span></li>
+            <li><span>Americano</span><span>$4.00</span></li>
+            <li><span>Cappuccino</span><span>$5.50</span></li>
+            <li><span>Flat White</span><span>$5.75</span></li>
+            <li><span>Cortado</span><span>$5.00</span></li>
+            <li><span>Latte</span><span>$5.75</span></li>
+            <li><span>Macchiato</span><span>$4.75</span></li>
+          </ul>
+        </div>
+        <div class="pricing-card featured reveal">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-header">
+            <h3>Specialty Drinks</h3>
+            <p>Our signature creations</p>
+          </div>
+          <ul class="price-list">
+            <li><span>Signature Latte</span><span>$7.00</span></li>
+            <li><span>Dark Mocha</span><span>$7.50</span></li>
+            <li><span>Honey Lavender Latte</span><span>$7.50</span></li>
+            <li><span>Matcha Latte</span><span>$6.75</span></li>
+            <li><span>Turmeric Latte</span><span>$6.75</span></li>
+            <li><span>Cold Brew Float</span><span>$8.00</span></li>
+            <li><span>Nitro Cold Brew</span><span>$6.50</span></li>
+            <li><span>Iced Shaken Espresso</span><span>$6.00</span></li>
+          </ul>
+        </div>
+        <div class="pricing-card reveal">
+          <div class="pricing-header">
+            <h3>Non-Coffee & Food</h3>
+            <p>For every taste</p>
+          </div>
+          <ul class="price-list">
+            <li><span>Cold Brew (12oz)</span><span>$5.50</span></li>
+            <li><span>Hot Chocolate</span><span>$5.00</span></li>
+            <li><span>Chai Latte</span><span>$5.50</span></li>
+            <li><span>Croissant</span><span>$4.50</span></li>
+            <li><span>Avocado Toast</span><span>$9.00</span></li>
+            <li><span>Banana Bread</span><span>$4.00</span></li>
+            <li><span>Yogurt Parfait</span><span>$7.50</span></li>
+            <li><span>Bagel & Cream Cheese</span><span>$5.00</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="section-label reveal">Reach Out</p>
+          <h2 class="section-title reveal">Say <em>Hello</em></h2>
+          <p class="contact-body reveal">Have a question, want to book a private event, or just want to share your love for coffee? We'd love to hear from you.</p>
+          <div class="contact-details reveal">
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>Address</strong>
+                <p>142 West 10th St, Manhattan, NY 10014</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <p>+1 (212) 555-0194</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <p>hello@Ereccoffee.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" placeholder="Private Event Booking" />
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea rows="5" placeholder="Tell us something..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message <span>→</span></button>
+            <div class="form-success" id="formSuccess">Your message has been sent! ☕</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">☕ Erec</div>
+        <p>Where every cup tells a story.<br />Crafted with precision, served with soul.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#drinks">Menu</a></li>
+            <li><a href="#hours">Hours</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Pinterest</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit Us</h4>
+          <ul>
+            <li>142 West 10th St</li>
+            <li>Manhattan, NY 10014</li>
+            <li>+1 (212) 555-0194</li>
+            <li>hello@Ereccoffee.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Erec Coffee. All rights reserved</p>
+      <p>Made with ☕ in Manhattan</p>
+    </div>
+  </footer>
+
+  <script src="static/js/script.js"></script>
+</body>
+</html>
