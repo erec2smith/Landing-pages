@@ -1,0 +1,13 @@
+{
+  "name": "darkroom-image-editor",
+  "version": "1.0.0",
+  "description": "A browser-based image editor with drag-and-drop upload, live filter adjustments, and PNG export.",
+  "scripts": {
+    "build": "tsc --noEmit && esbuild src/ts/main.ts --bundle --outfile=dist/js/bundle.js --format=iife --target=es2020",
+    "watch": "esbuild src/ts/main.ts --bundle --outfile=dist/js/bundle.js --format=iife --target=es2020 --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "esbuild": "^0.21.0"
+  }
+}

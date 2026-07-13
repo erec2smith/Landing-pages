@@ -1,0 +1,24 @@
+:root {
+  --color-bg: #14120f;
+  --color-bg-raised: #1d1a16;
+  --color-bg-inset: #100e0b;
+  --color-border: #33302a;
+  --color-border-soft: #262319;
+
+  --color-text: #f2ede4;
+  --color-text-muted: #8b8378;
+  --color-text-faint: #5b564c;
+
+  --color-amber: #e8934a;
+  --color-amber-dim: #b8712f;
+  --color-red: #c1443a;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+
+  --shadow-panel: 0 20px 60px rgba(0, 0, 0, 0.45);
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darkroom - Image Editor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/styles/reset.css">
+<link rel="stylesheet" href="src/styles/variables.css">
+<link rel="stylesheet" href="src/styles/layout.css">
+<link rel="stylesheet" href="src/styles/controls.css">
+</head>
+<body>
+<div class="app">
+  <!-- https://github.com/erec2smith/front-end  -->
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-mark">◐</span>
+      <div class="brand-text">
+        <span class="brand-title">Darkroom</span>
+        <span class="brand-subtitle">image editor</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-ghost" id="reset-btn" disabled>Reset</button>
+      <button class="btn btn-primary" id="save-btn" disabled>Save image</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+
+    <section class="stage" id="stage">
+      <div class="stage-sprocket stage-sprocket-top"></div>
+
+      <div class="dropzone" id="dropzone">
+        <input type="file" id="file-input" accept="image/*" hidden>
+        <div class="dropzone-content">
+          <span class="dropzone-icon">＋</span>
+          <p class="dropzone-title">Drop an image here</p>
+          <p class="dropzone-subtitle">or click to browse — JPG, PNG, WEBP</p>
+        </div>
+      </div>
+
+      <div class="canvas-wrap" id="canvas-wrap" hidden>
+        <canvas id="canvas"></canvas>
+      </div>
+
+      <div class="stage-sprocket stage-sprocket-bottom"></div>
+    </section>
+
+    <aside class="panel" id="panel">
+      <div class="panel-header">
+        <span class="panel-eyebrow">01</span>
+        <h2 class="panel-title">Adjust</h2>
+      </div>
+
+      <div class="panel-body">
+
+        <div class="control" data-control="brightness">
+          <div class="control-label">
+            <label for="brightness">Brightness</label>
+            <span class="control-value" id="brightness-value">100%</span>
+          </div>
+          <input type="range" id="brightness" min="0" max="200" value="100" disabled>
+        </div>
+
+        <div class="control" data-control="contrast">
+          <div class="control-label">
+            <label for="contrast">Contrast</label>
+            <span class="control-value" id="contrast-value">100%</span>
+          </div>
+          <input type="range" id="contrast" min="0" max="200" value="100" disabled>
+        </div>
+
+        <div class="control" data-control="saturation">
+          <div class="control-label">
+            <label for="saturation">Saturation</label>
+            <span class="control-value" id="saturation-value">100%</span>
+          </div>
+          <input type="range" id="saturation" min="0" max="200" value="100" disabled>
+        </div>
+
+        <div class="control" data-control="blur">
+          <div class="control-label">
+            <label for="blur">Blur</label>
+            <span class="control-value" id="blur-value">0px</span>
+          </div>
+          <input type="range" id="blur" min="0" max="20" step="0.5" value="0" disabled>
+        </div>
+
+        <div class="control" data-control="hue">
+          <div class="control-label">
+            <label for="hue">Hue rotate</label>
+            <span class="control-value" id="hue-value">0°</span>
+          </div>
+          <input type="range" id="hue" min="0" max="360" value="0" disabled>
+        </div>
+
+        <div class="control" data-control="sepia">
+          <div class="control-label">
+            <label for="sepia">Sepia</label>
+            <span class="control-value" id="sepia-value">0%</span>
+          </div>
+          <input type="range" id="sepia" min="0" max="100" value="0" disabled>
+        </div>
+
+        <div class="control-divider"></div>
+
+        <div class="toggle-row">
+          <button class="toggle-btn" id="grayscale-toggle" disabled>
+            <span class="toggle-icon">◑</span>
+            <span>Grayscale</span>
+          </button>
+          <button class="toggle-btn" id="invert-toggle" disabled>
+            <span class="toggle-icon">◒</span>
+            <span>Invert</span>
+          </button>
+        </div>
+
+        <div class="panel-header panel-header-secondary">
+          <span class="panel-eyebrow">02</span>
+          <h2 class="panel-title">Transform</h2>
+        </div>
+
+        <div class="transform-row">
+          <button class="icon-btn" id="rotate-left-btn" disabled title="Rotate left">⟲</button>
+          <button class="icon-btn" id="rotate-right-btn" disabled title="Rotate right">⟳</button>
+          <button class="icon-btn" id="flip-h-btn" disabled title="Flip horizontal">⇋</button>
+          <button class="icon-btn" id="flip-v-btn" disabled title="Flip vertical">⇵</button>
+        </div>
+
+      </div>
+    </aside>
+
+  </main>
+
+</div>
+
+<script src="dist/js/bundle.js"></script>
+</body>
+</html>
